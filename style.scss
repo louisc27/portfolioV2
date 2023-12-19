@@ -150,10 +150,73 @@ body{
 
     &:is(:hover, :focus-visible){
       transform: translateY(-4px);
+      color: var(--cinnamon-satin);
     }
   }
 }
 
+.section{
+  padding-block: var(--section-padding);
+}
+
+.w-100{
+  width: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4{
+color: var(--charcoal);
+line-height: 1.3;
+}
+
+.h1{
+  font-size: var(--fs-1);
+}
+.h2{
+  font-size: var(--fs-2);
+}
+.h3{
+  font-size: var(--fs-3);
+}
+.h4{
+  font-size: var(--fs-4);
+}
+
+.btn{
+  color: var(--cinnamon-satin);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--cinnamon-satin);
+  border-radius: var(--radius-pill);
+  max-width: max-content;
+  padding: 12px 28px;
+  transition: var(--transition-1);
+  will-change: transform;
+
+  &:is(:hover, :focus-visible){
+    transform: translateY(-4px);
+  }
+}
+.btn-primary,
+.btn-secondary:is(:hover,:focus-visible){
+  background-color: var(--cinnamon-satin);
+  color: var(--white);
+}
+
+.section-text{
+  font-size: var(--fs-5);
+}
+
+.section-title{
+  margin-block-end: 16px;
+}
+
+.grid-lsit{
+  display: grid;
+  gap: 30px;
+}
 // REPEATED END
 
 
@@ -279,8 +342,94 @@ body{
 
 
 // HERO SECTION
+.hero{
+  padding-block-start: calc(var(--section-padding) + 50px);
+  background-color: var(--cultured);
 
 
+  .container{
+    display: grid;
+    gap:50px;
+  }
 
+  .shape{
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+    filter: drop-shadow(var(--shadow-2));
+  }
 
+  .section-text{
+    margin-block: 24px 36px;
+  }
+}
+
+.hero-banner{
+  position: relative;
+  max-width: max-content;
+  margin-inline:auto;
+
+  .w-100{
+    mask-image: url("/blob.svg");
+    -webkit-mask-image: url("/Blog.svg");
+    mask-repeat: no-repeat;
+   
+    mask-position: center;
+    
+    mask-size: auto;
+    
+   
+  }
+}
+.hero-content{
+  text-align: center;
+}
+.btn-wrapper{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items:center;
+  gap: 12px;
+
+}
 // HERO SECTION END
+
+// ABOUT START
+.about .wrapper{
+  display: grid;
+  gap: 50px;
+  margin-block-end: 70px;
+}
+.progress-list .label-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 4px;
+}
+.progress-list:not(:last-child){
+  margin-block-end: 16px;
+}
+.progress{
+  background-color: var(--raisin-black_a6);
+  height: 6px;
+  width: 100%;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.progress-fill{
+  height: inherit;
+}
+.about-card{
+  text-align: center;
+
+
+  .card-icon{
+    max-width: max-content;
+    margin-inline:auto;
+  }
+
+  .card-title{
+    margin-block: 16px 10px;
+  }
+}
+// ABOUT END
